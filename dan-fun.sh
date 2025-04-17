@@ -2,6 +2,8 @@
 
 # Validation of .deb and .rpm creation using jlink and jpackage with Java 17 and Docker
 
+# clear out the output directory
+rm -rf output
 
 # build the docker image used to create the .deb installer
 docker build --tag "deb-hello" -f installers/deb/deb-hello.dockerfile .
