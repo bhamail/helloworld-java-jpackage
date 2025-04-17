@@ -9,5 +9,5 @@ FROM redhat/ubi9
 # todo: try smaller jdk install (openjdk-devel needed for javac on minimal image)
 RUN dnf upgrade && dnf install -y java-17-openjdk-devel binutils rpmdevtools
 
-COPY . /data
+COPY ../.. /data
 #RUN cd /data && ./mvnw verify && ./mvnw -Pjdks

@@ -14,4 +14,10 @@ docker rmi deb-hello
 
 
 # build the docker image used to create the .rpm installer
-#docker build --tag "rpm-hello" -f rpm-hello.dockerfile .
+docker build --tag "rpm-hello" -f installers/rpm/rpm-hello.dockerfile .
+
+# run the docker image to create the .rpm installer
+#docker run -v "$(pwd)/output":/output rpm-hello /bin/bash /data/installers/rpm/startup.sh
+docker run --rm -v "$(pwd)/output":/output rpm-hello /bin/bash /data/installers/rpm/startup.sh
+
+docker rmi rpm-hello
