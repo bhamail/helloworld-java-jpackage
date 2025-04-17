@@ -65,7 +65,7 @@ assemble:
         packageName: HelloWorld
         packageIdentifier: org.jreleaser.examples.helloworld
       linux:
-        types: [deb,rpm]
+        types: [deb]
         maintainer: jreleaser@kordamp.org
       windows:
         types: [msi]
