@@ -8,4 +8,5 @@ RUN cd /data && ./mvnw verify && ./mvnw -Pjdks
 #RUN chown -R nobody /output/*
 VOLUME /output
 
-CMD ["startup.sh"]
+#CMD ["pwd"]
+#CMD ["./startup.sh"]
