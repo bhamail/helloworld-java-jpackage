@@ -4,6 +4,7 @@
 
 # clear out the output directory
 rm -r output/*
+mkdir output
 
 # build the docker image used to create the .deb installer
 docker build --tag "deb-hello" -f installers/deb/deb-hello.dockerfile .
