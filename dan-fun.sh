@@ -10,4 +10,4 @@ docker build --tag "deb-hello" -f deb-hello.dockerfile .
 docker run --tag "deb-hello" -v output:/output deb-hello
 
 # build the docker image used to create the .rpm installer
-docker build --tag "rpm-hello" -f rpm-hello.dockerfile .
+#docker build --tag "rpm-hello" -f rpm-hello.dockerfile .
