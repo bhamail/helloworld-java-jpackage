@@ -123,7 +123,7 @@
       </build>
     </profile>
     <profile>
-      <id>jr1</id>
+      <id>jr-deb</id>
         <build>
           <plugins>
             <plugin>
@@ -132,14 +132,30 @@
               <version>${jreleaser.version}</version>
               <inherited>false</inherited>
               <configuration>
-                <configFile>jreleaser.yml</configFile>
+                <configFile>jreleaser-deb.yml</configFile>
               </configuration>
             </plugin>
           </plugins>
         </build>
     </profile>
     <profile>
-      <id>jr2</id>
+      <id>jr-rpm</id>
+        <build>
+          <plugins>
+            <plugin>
+              <groupId>org.jreleaser</groupId>
+              <artifactId>jreleaser-maven-plugin</artifactId>
+              <version>${jreleaser.version}</version>
+              <inherited>false</inherited>
+              <configuration>
+                <configFile>jreleaser-rpm.yml</configFile>
+              </configuration>
+            </plugin>
+          </plugins>
+        </build>
+    </profile>
+    <profile>
+      <id>jr</id>
         <build>
           <plugins>
             <plugin>
