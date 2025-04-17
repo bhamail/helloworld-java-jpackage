@@ -7,4 +7,4 @@ cd /data
 echo "done building debian package"
 
 # .deb is created at: data/target/jreleaser/assemble/helloworld/jpackage/helloworld_1.0.0-1_amd64.deb
-cp /data/target/jreleaser/assemble/helloworld/jpackage/* /output/
+cp -r /data/target/jreleaser/assemble/helloworld/jpackage/* /output/
