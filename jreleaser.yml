@@ -9,7 +9,7 @@ project:
   description: HelloWorld in Java
   longDescription: HelloWorld in Java
   links:
-    homepage: https://github.com/jreleaser/helloworld-java-jpackage
+    homepage: https://github.com/bhamail/helloworld-java-jpackage
   authors:
     - Andres Almiray
   license: APACHE-2.0
@@ -43,14 +43,8 @@ assemble:
       imageName: 'helloworld-{{projectVersion}}'
       executable: helloworld
       targetJdks:
-        - path: '{{jdkPathPrefix}}/zulu17OsxIntel/{{jdkFilePrefix}}-macosx_x64/zulu-17.jdk/Contents/Home'
-          platform: 'osx-x86_64'
-        - path: '{{jdkPathPrefix}}/zulu17OsxArm/{{jdkFilePrefix}}-macosx_aarch64/zulu-17.jdk/Contents/Home'
-          platform: 'osx-aarch_64'
         - path: '{{jdkPathPrefix}}/zulu17LinuxIntel/{{jdkFilePrefix}}-linux_x64'
           platform: 'linux-x86_64'
-        - path: '{{jdkPathPrefix}}/zulu17WindowsIntel/{{jdkFilePrefix}}-win_x64'
-          platform: 'windows-x86_64'
       mainJar:
         path: 'target/helloworld-{{projectVersion}}.jar'
 
@@ -81,13 +75,7 @@ distributions:
   helloworld:
     type: NATIVE_PACKAGE
     artifacts:
-      - path: '{{artifactsDir}}/HelloWorld-{{projectVersionNumber}}-osx-x86_64.pkg'
-        platform: 'osx-x86_64'
-      - path: '{{artifactsDir}}/HelloWorld-{{projectVersionNumber}}-osx-aarch64.pkg'
-        platform: 'osx-aarch_64'
       - path: '{{artifactsDir}}/{{distributionName}}_{{projectVersionNumber}}-1_amd64.deb'
         platform: 'linux-x86_64'
       - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersionNumber}}-1.x86_64.rpm'
         platform: 'linux-x86_64'
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersionNumber}}-windows-x86_64.msi'
-        platform: 'windows-x86_64'
