@@ -7,4 +7,4 @@ RUN cd /data && ./mvnw verify && ./mvnw -Pjdks
 
 VOLUME /output
 
-ENTRYPOINT ["installers/deb/startup.sh"]
+CMD ["startup.sh"]
