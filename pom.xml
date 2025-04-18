@@ -104,7 +104,7 @@
                 </pkg>
                 <pkg>
                   <name>zulu17LinuxIntel</name>
-                  <platform>linux-aarch_64</platform>
+                  <platform>linux-aarch64</platform>
                   <version>${jdk.version}</version>
                 </pkg>
 <!--
