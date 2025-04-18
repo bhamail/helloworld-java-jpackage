@@ -102,6 +102,11 @@
                   <platform>linux-x86_64</platform>
                   <version>${jdk.version}</version>
                 </pkg>
+                <pkg>
+                  <name>zulu17LinuxIntel</name>
+                  <platform>linux-aarch64</platform>
+                  <version>${jdk.version}</version>
+                </pkg>
 <!--
                 <pkg>
                   <name>zulu17OsxArm</name>
