@@ -13,6 +13,6 @@ FROM debian:bookworm-slim
 RUN apt-get update && apt-get install -y openjdk-17-jdk binutils fakeroot
 
 COPY . /data
-RUN cd /data && ./mvnw verify && ./mvnw -Pjdks
+#RUN cd /data && ./mvnw verify && ./mvnw -Pjdks
 
 VOLUME /output
