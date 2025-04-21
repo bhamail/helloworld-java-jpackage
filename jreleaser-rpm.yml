@@ -45,6 +45,8 @@ assemble:
       imageName: 'helloworld-{{projectVersion}}'
       executable: helloworld
       targetJdks:
+        - path: '{{jdkPathPrefix}}/{{jdkDirectoryPrefix}}_linux_x86_64/{{jdkFilePrefix}}'
+          platform: 'linux-x86_64'
 #        - path: '{{jdkPathPrefix}}/zulu17LinuxIntel/{{jdkFilePrefix}}-linux_x64'
 #          platform: 'linux-x86_64'
 #        - path: '/usr/lib/jvm/java-17-openjdk-17.0.15.0.6-2.el9.aarch64'
