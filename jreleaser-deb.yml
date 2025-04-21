@@ -47,11 +47,15 @@ assemble:
       targetJdks:
         - path: '{{jdkPathPrefix}}/{{jdkDirectoryPrefix}}_linux_x86_64/{{jdkFilePrefix}}'
           platform: 'linux-x86_64'
+          extraProperties:
+            archiveFormat: TGZ
 #        - path: '{{jdkPathPrefix}}/zulu17LinuxArm/{{jdkFilePrefix}}-linux_aarch64'
         # todo: report issue with jdk download of linux aarch_64
 #        - path: '/usr/lib/jvm/java-17-openjdk-arm64'
         - path: '{{jdkPathPrefix}}/{{jdkDirectoryPrefix}}_linux_aarch64/{{jdkFilePrefix}}'
           platform: 'linux-aarch_64'
+          extraProperties:
+            archiveFormat: TGZ
       mainJar:
         path: 'target/helloworld-{{projectVersion}}.jar'
 
