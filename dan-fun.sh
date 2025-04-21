@@ -6,6 +6,15 @@
 rm -r output/*
 mkdir output
 
+# clean out target dir (deletes prior jdk downloads, etc)
+./mvnw clean
+
+# build executable jar, etd
+./mvnw package
+
+# download jdks needed for packaging
+./mvnw -Pjdks
+
 # build the docker image used to create the .deb installer
 docker build --tag "deb-hello" -f installers/deb/deb-hello.dockerfile .
 
