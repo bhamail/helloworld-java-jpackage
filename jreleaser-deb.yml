@@ -22,9 +22,9 @@ project:
       artifactId: helloworld
       mainClass: org.jreleaser.examples.HelloWorld
 
-platform:
-  replacements:
-    aarch_64: aarch64
+#platform:
+#  replacements:
+#    aarch_64: aarch64
 
 release:
   github:
@@ -45,6 +45,10 @@ assemble:
       targetJdks:
         - path: '{{jdkPathPrefix}}/zulu17LinuxIntel/{{jdkFilePrefix}}-linux_x64'
           platform: 'linux-x86_64'
+#        - path: '{{jdkPathPrefix}}/zulu17LinuxArm/{{jdkFilePrefix}}-linux_aarch64'
+        # todo: report issue with jdk download of linux aarch_64
+#        - path: '/usr/lib/jvm/java-17-openjdk-arm64'
+#          platform: 'linux-aarch_64'
       mainJar:
         path: 'target/helloworld-{{projectVersion}}.jar'
 

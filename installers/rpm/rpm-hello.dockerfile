@@ -10,3 +10,6 @@ FROM redhat/ubi9
 RUN dnf upgrade && dnf install -y java-17-openjdk-devel binutils rpmdevtools
 
 COPY . /data
+RUN cd /data && ./mvnw verify && ./mvnw -Pjdks
+
+VOLUME /output
