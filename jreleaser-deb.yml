@@ -1,7 +1,9 @@
 environment:
   properties:
     jdkPathPrefix: 'target/jdks'
-    jdkFilePrefix: 'zulu17.32.13-ca-jdk17.0.2'
+#    jdkFilePrefix: 'zulu17.32.13-ca-jdk17.0.2'
+    jdkDirectoryPrefix: 'temurin_17.0.12_7'
+    jdkFilePrefix: 'jdk-17.0.12+7'
     artifactsDir: out/jreleaser/assemble/helloworld/jpackage
 
 project:
@@ -43,12 +45,13 @@ assemble:
       imageName: 'helloworld-{{projectVersion}}'
       executable: helloworld
       targetJdks:
-        - path: '{{jdkPathPrefix}}/zulu17LinuxIntel/{{jdkFilePrefix}}-linux_x64'
-          platform: 'linux-x86_64'
+#        - path: '{{jdkPathPrefix}}/zulu17LinuxIntel/{{jdkFilePrefix}}-linux_x64'
+#          platform: 'linux-x86_64'
 #        - path: '{{jdkPathPrefix}}/zulu17LinuxArm/{{jdkFilePrefix}}-linux_aarch64'
         # todo: report issue with jdk download of linux aarch_64
 #        - path: '/usr/lib/jvm/java-17-openjdk-arm64'
-#          platform: 'linux-aarch_64'
+        - path: '{{jdkPathPrefix}}/{{jdkDirectoryPrefix}}_linux_aarch64/{{jdkFilePrefix}}'
+          platform: 'linux-aarch_64'
       mainJar:
         path: 'target/helloworld-{{projectVersion}}.jar'
 
